@@ -2,8 +2,8 @@ package com.yq.wanandroid;
 
 public abstract class BasePresenter<V extends IContract.IView, M extends IContract.IModel> {
 
-    V mView;
-    M mModel;
+    protected V mView;
+    protected M mModel;
 
     public BasePresenter(V mView) {
         this.mView = mView;

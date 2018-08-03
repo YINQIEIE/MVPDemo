@@ -1,7 +1,9 @@
-package com.yq.wanandroid;
+package com.yq.wanandroid.main;
 
 import android.app.Activity;
 import android.widget.Toast;
+
+import com.yq.wanandroid.BasePresenter;
 
 public class MainPresenter extends BasePresenter<MainContract.MainView, MainModel> implements MainContract.Presenter {
 

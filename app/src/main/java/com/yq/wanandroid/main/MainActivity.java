@@ -1,26 +1,30 @@
-package com.yq.wanandroid;
+package com.yq.wanandroid.main;
 
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
-public class MainActivity extends BaseActivity implements MainContract.MainView {
+import com.yq.wanandroid.BaseMVPActivity;
+import com.yq.wanandroid.R;
+
+public class MainActivity extends BaseMVPActivity<MainPresenter> implements MainContract.MainView {
 
     private EditText etUserName;
     private EditText etPwd;
     private Button btnLogin;
 
-    private MainPresenter presenter;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
         assignViews();
-        presenter = new MainPresenter(this);
+        mPresenter = new MainPresenter(this);
+    }
+
+    @Override
+    protected int getLayoutID() {
+        return R.layout.activity_main;
     }
 
     private void assignViews() {
@@ -33,18 +37,18 @@ public class MainActivity extends BaseActivity implements MainContract.MainView 
                 String name = etUserName.getText().toString().trim();
                 String pwd = etPwd.getText().toString().trim();
                 if (!TextUtils.isEmpty(name) && !TextUtils.isEmpty(pwd))
-                    presenter.login(name, pwd);
+                    mPresenter.login(name, pwd);
             }
         });
     }
 
     @Override
     public void loginSucceed() {
-        Toast.makeText(this, "登陆成功", Toast.LENGTH_LONG).show();
+        toast("登陆成功");
     }
 
     @Override
     public void loginFailed() {
-        Toast.makeText(this, "登陆失败", Toast.LENGTH_LONG).show();
+        toast("登陆失败");
     }
 }
