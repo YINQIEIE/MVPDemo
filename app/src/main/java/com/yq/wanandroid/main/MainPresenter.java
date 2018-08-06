@@ -10,17 +10,14 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class MainPresenter extends BasePresenter<MainContract.MainView, MainModel> implements MainContract.Presenter {
+public class MainPresenter extends BasePresenter<MainContract.MainView> implements MainContract.Presenter {
 
     private static final String TAG = MainPresenter.class.getSimpleName();
+    private final MainModel mModel;
 
     public MainPresenter(MainContract.MainView mView) {
         super(mView);
-    }
-
-    @Override
-    protected MainModel createModel() {
-        return new MainModel();
+        mModel = new MainModel();
     }
 
     @Override

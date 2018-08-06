@@ -3,17 +3,17 @@ package com.yq.wanandroid.factory;
 import com.yq.wanandroid.BasePresenter;
 import com.yq.wanandroid.IContract;
 
-public class PresenterProxy<V extends IContract.IView, M extends IContract.IModel, P extends BasePresenter<V, M>> implements IPresenterProxy<V, M, P> {
+public class PresenterProxy<V extends IContract.IView, P extends BasePresenter<V>> implements IPresenterProxy<V, P> {
 
-    private PresenterFactory<V, M, P> presenterFactory;
+    private PresenterFactory<V, P> presenterFactory;
     private P mPresenter;
 
-    public PresenterProxy(PresenterFactory<V, M, P> presenterFactory) {
+    public PresenterProxy(PresenterFactory<V, P> presenterFactory) {
         this.presenterFactory = presenterFactory;
     }
 
     @Override
-    public void setPresentFactory(PresenterFactory<V, M, P> factory) {
+    public void setPresentFactory(PresenterFactory<V, P> factory) {
         if (mPresenter != null) {
             throw new IllegalStateException("这个方法只能在 getPresenter() 之前调用，如果Presenter已经创建则不能再修改");
         }
