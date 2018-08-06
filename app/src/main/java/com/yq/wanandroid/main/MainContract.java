@@ -8,9 +8,6 @@ public interface MainContract extends IContract {
 
         void login(String name, String pwd);
 
-        void loginSucceed();
-
-        void loginFailed();
     }
 
     interface MainView extends IView {
