@@ -1,8 +1,8 @@
-package com.yq.wanandroid.factory;
+package com.yq.mvpbase.factory;
 
 import android.support.annotation.NonNull;
 
-import com.yq.wanandroid.BasePresenter;
+import com.yq.mvpbase.BasePresenter;
 
 import java.lang.annotation.Inherited;
 import java.lang.annotation.Retention;

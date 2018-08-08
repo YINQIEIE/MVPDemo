@@ -2,7 +2,7 @@ package com.yq.wanandroid.main;
 
 import android.util.Log;
 
-import com.yq.wanandroid.BasePresenter;
+import com.yq.mvpbase.BasePresenter;
 import com.yq.wanandroid.http.BaseResponse;
 import com.yq.wanandroid.http.Response.User;
 

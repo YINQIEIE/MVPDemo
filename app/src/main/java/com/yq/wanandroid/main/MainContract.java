@@ -1,6 +1,7 @@
 package com.yq.wanandroid.main;
 
-import com.yq.wanandroid.IContract;
+
+import com.yq.mvpbase.IContract;
 
 public interface MainContract extends IContract {
 

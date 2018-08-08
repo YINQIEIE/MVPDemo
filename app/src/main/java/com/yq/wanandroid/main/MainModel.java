@@ -1,6 +1,6 @@
 package com.yq.wanandroid.main;
 
-import com.yq.wanandroid.IContract;
+import com.yq.mvpbase.IContract;
 import com.yq.wanandroid.http.BaseResponse;
 import com.yq.wanandroid.http.Response.User;
 import com.yq.wanandroid.http.RetrofitManager;

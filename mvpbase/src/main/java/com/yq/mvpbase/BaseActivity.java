@@ -1,4 +1,4 @@
-package com.yq.wanandroid;
+package com.yq.mvpbase;
 
 import android.os.Bundle;
 import android.support.annotation.LayoutRes;

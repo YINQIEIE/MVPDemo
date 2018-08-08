@@ -1,11 +1,11 @@
-package com.yq.wanandroid.factory;
+package com.yq.mvpbase.factory;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 
-import com.yq.wanandroid.BaseActivity;
-import com.yq.wanandroid.BasePresenter;
-import com.yq.wanandroid.IContract;
+import com.yq.mvpbase.BaseActivity;
+import com.yq.mvpbase.BasePresenter;
+import com.yq.mvpbase.IContract;
 
 public abstract class BaseMvpFactoryActivity<V extends IContract.IView, P extends BasePresenter<V>> extends BaseActivity implements IPresenterProxy<V, P> {
 

@@ -1,4 +1,4 @@
-package com.yq.wanandroid;
+package com.yq.mvpbase;
 
 public interface IContract {
 

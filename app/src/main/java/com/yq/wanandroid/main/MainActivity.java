@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.yq.wanandroid.BaseMVPActivity;
+import com.yq.mvpbase.BaseMVPActivity;
 import com.yq.wanandroid.R;
 
 public class MainActivity extends BaseMVPActivity<MainPresenter> implements MainContract.MainView {

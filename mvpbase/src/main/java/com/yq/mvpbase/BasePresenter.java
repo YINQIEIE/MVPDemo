@@ -1,4 +1,4 @@
-package com.yq.wanandroid;
+package com.yq.mvpbase;
 
 public abstract class BasePresenter<V extends IContract.IView> {
 
